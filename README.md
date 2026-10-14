@@ -4,6 +4,10 @@ Four reproducible projects on **real public datasets**, covering SQL, Python, Ex
 
 **Author:** Islam Badawi · [GitHub @islambadawi0](https://github.com/islambadawi0)
 
+**Live portfolio:** [data-analysis-portfolio-sooty.vercel.app](https://data-analysis-portfolio-sooty.vercel.app/)
+
+---
+
 ## Projects
 
 | Project | Question it answers | Stack | Headline result |
@@ -13,16 +17,25 @@ Four reproducible projects on **real public datasets**, covering SQL, Python, Ex
 | [**P3 — Used Vehicle Listings EDA**](p3-used-cars-eda-python/) | What drives used-car asking prices? | Python (pandas, seaborn) | 375K clean listings; median price falls ~85% from new to 16–20-year-old cars (age correlation −0.69) |
 | [**P4 — Customer Churn Prediction**](p4-churn-prediction-sklearn/) | Which subscribers will churn next month? | Python, scikit-learn | **ROC-AUC 0.876** on a later-month holdout of 971K members; ~6.5× better than chance in average precision |
 
+---
+
 ## Skills demonstrated
+
 - **SQL:** CTEs, window functions (`LAG`, running shares), grain-safe joins, integrity checks
 - **Python:** pandas, chunked processing of multi-GB files, scikit-learn pipelines, matplotlib/seaborn, pytest
 - **BI:** Excel summary workbook, Power BI model with DAX measures
 - **Analytics practice:** cleaning ledgers, leakage-aware temporal validation, metric definitions, honest limitations
 
+---
+
 ## Data sources
+
 Raw data is not stored in this repository. See [DATA_SOURCES.md](DATA_SOURCES.md) for each dataset, access method and license caveat.
 
+---
+
 ## Running a project
+
 Each project folder has its own `requirements.txt` and a README with the exact commands. Typical flow:
 
 ```bash
