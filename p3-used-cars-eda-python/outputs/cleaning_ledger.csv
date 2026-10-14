@@ -1,0 +1,6 @@
+stage,rows_before,rows_after,rows_removed,rule
+source_loaded,426880,426880,0,Source row count before cleaning
+deduplicated,426880,426880,0,Keep the latest posting per source listing ID
+scope_valid_price_year,426880,375515,51365,"Keep listed price $500–$250,000 and vehicle year 1980 through listing year + 1; chosen business scope, review sensitivity before conclusions"
+odometer_domain_review,375515,375515,0,"312 values outside 0–1,000,000 miles set to missing, records retained"
+features_created,375515,375515,0,"Added vehicle age at listing, miles/year, log price, and an IQR outlier flag; flagged outliers are retained"

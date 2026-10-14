@@ -1,0 +1,8 @@
+order_status,orders,product_sales_brl,freight_value_brl,payment_value_brl,payments_minus_items_and_freight_brl
+delivered,96478,13221498.11,2198275.64,15422461.77,2688.02
+shipped,1106,150727.44,26401.9,177136.23,6.89
+canceled,461,95235.27,10650.45,105917.73,32.01
+invoiced,312,61526.37,7462.38,68988.76,0.01
+processing,301,60439.22,8954.89,69394.11,-0.0
+unavailable,6,2007.69,132.8,2140.49,-0.0
+approved,2,209.6,31.48,241.08,-0.0

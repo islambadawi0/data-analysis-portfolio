@@ -1,0 +1,45 @@
+rows: 375,515
+median price: 15,900 | mean price: 19,277
+
+median price by vehicle age:
+                         median    size
+vehicle_age_at_listing                 
+(-1, 2]                 33998.0   41547
+(2, 5]                  26500.0   89466
+(5, 10]                 14995.0  121551
+(10, 15]                 7400.0   68205
+(15, 20]                 5000.0   35109
+(20, 100]                5500.0   19637
+
+median price by odometer:
+                    median    size
+odometer                          
+(-1, 25000]        30590.0   59767
+(25000, 75000]     23900.0  100599
+(75000, 125000]    12900.0   98695
+(125000, 175000]    7995.0   72560
+(175000, 250000]    5900.0   35631
+(250000, 2000000]   6500.0    5912
+
+Spearman price~age: -0.694 | price~odometer: -0.607
+
+top 8 manufacturers by median price (>=1000 listings):
+               median   size
+manufacturer                
+ram           29995.0  16162
+porsche       29950.0   1243
+jaguar        28990.0   1852
+rover         25995.0   1919
+audi          24990.0   7014
+gmc           24553.0  15045
+infiniti      21590.0   4406
+acura         20289.0   5555
+
+bottom 5:
+               median   size
+manufacturer                
+mazda         10387.5   4926
+honda          9250.0  19404
+chrysler       7999.0   5467
+pontiac        4499.0   1905
+saturn         4235.5   1060

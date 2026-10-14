@@ -1,0 +1,83 @@
+{
+  "source": "KKBox's Churn Prediction Challenge",
+  "source_url": "https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge/data",
+  "training_cohort": "train.csv labels, feature snapshot cutoff 2017-01-31",
+  "temporal_test_cohort": "train_v2.csv labels, feature snapshot cutoff 2017-02-28",
+  "target_definition": "Official competition is_churn target: member did not continue a valid subscription within 30 days after the relevant membership expiry.",
+  "train_rows": 992931,
+  "test_rows": 970960,
+  "train_positive_rate": 0.06392287077349786,
+  "test_positive_rate": 0.08994191315811156,
+  "tuning_rows": 100000,
+  "best_params": {
+    "model__max_depth": 18,
+    "model__max_features": "sqrt",
+    "model__min_samples_leaf": 5,
+    "model__n_estimators": 200
+  },
+  "best_cv_average_precision": 0.5130773074024725,
+  "test_metrics": [
+    {
+      "model": "Prior baseline",
+      "roc_auc": 0.5,
+      "average_precision_pr_auc": 0.08994191315811156,
+      "log_loss": 0.30746335632673705,
+      "precision_at_0_5": 0.0,
+      "recall_at_0_5": 0.0,
+      "f1_at_0_5": 0.0
+    },
+    {
+      "model": "Balanced logistic regression",
+      "roc_auc": 0.8456730854698049,
+      "average_precision_pr_auc": 0.53921155914907,
+      "log_loss": 0.41920228410226734,
+      "precision_at_0_5": 0.4217066166225938,
+      "recall_at_0_5": 0.6793083705484942,
+      "f1_at_0_5": 0.5203722709051516
+    },
+    {
+      "model": "Tuned random forest",
+      "roc_auc": 0.8755291540899354,
+      "average_precision_pr_auc": 0.5844433108208247,
+      "log_loss": 0.362918255352397,
+      "precision_at_0_5": 0.43917312891820426,
+      "recall_at_0_5": 0.6770296576205199,
+      "f1_at_0_5": 0.5327584497968084
+    }
+  ],
+  "feature_columns": [
+    "txn_count",
+    "txn_count_30d",
+    "txn_count_90d",
+    "mean_amount_paid",
+    "mean_plan_days",
+    "mean_plan_list_price",
+    "auto_renew_rate",
+    "cancel_rate",
+    "mean_discount_ratio",
+    "days_since_last_transaction",
+    "days_until_latest_expiry",
+    "last_payment_method_id",
+    "last_payment_plan_days",
+    "last_plan_list_price",
+    "last_amount_paid",
+    "last_is_auto_renew",
+    "last_is_cancel",
+    "city_code",
+    "registration_channel",
+    "membership_tenure_days"
+  ],
+  "excluded_inputs": [
+    "msno",
+    "cohort",
+    "snapshot_date",
+    "is_churn"
+  ],
+  "leakage_controls": [
+    "February cohort features use transactions dated on/before 2017-01-31.",
+    "March cohort features use transactions dated on/before 2017-02-28.",
+    "The later labeled cohort is held out for temporal evaluation.",
+    "Transaction records after each cohort's feature cutoff are not used to build its features."
+  ],
+  "generated_at_utc": "2026-10-14T04:53:12.813063+00:00"
+}

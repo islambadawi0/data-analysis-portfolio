@@ -1,0 +1,7 @@
+check,value,status
+source_rows,1666055,info
+rows_after_type_normalization,1666055,info
+fiscal_year_count,3,info
+exact_duplicate_rows,155837,review
+negative_numeric_pay_or_hour_values,43177,review
+missing_fiscal_year,0,pass

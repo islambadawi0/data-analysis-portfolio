@@ -1,0 +1,33 @@
+{
+  "source": "KKBox's Churn Prediction Challenge (Kaggle)",
+  "source_url": "https://www.kaggle.com/competitions/kkbox-churn-prediction-challenge/data",
+  "cohorts": [
+    {
+      "cohort": "train_v1",
+      "label_rows": 992931,
+      "unique_members": 992931,
+      "churn_rate": 0.06392287077349786,
+      "snapshot_date": "20170131",
+      "members_without_transaction_features": 2097,
+      "features_with_member_profile": 877161
+    },
+    {
+      "cohort": "test_v2",
+      "label_rows": 970960,
+      "unique_members": 970960,
+      "churn_rate": 0.08994191315811156,
+      "snapshot_date": "20170228",
+      "members_without_transaction_features": 2527,
+      "features_with_member_profile": 860967
+    }
+  ],
+  "feature_cutoffs": {
+    "train_v1": "2017-01-31; transaction records on/before this date only",
+    "test_v2": "2017-02-28; transaction records on/before this date only"
+  },
+  "target_definition": "Use source-provided is_churn labels: 1 indicates a member did not continue the subscription within 30 days after the relevant membership expiry; 0 indicates renewal.",
+  "excluded_feature_groups": [
+    "User listening logs are not downloaded in this portfolio release to control data volume; membership and transaction history are used."
+  ],
+  "generated_at_utc": "2026-10-14T04:38:08.944706+00:00"
+}

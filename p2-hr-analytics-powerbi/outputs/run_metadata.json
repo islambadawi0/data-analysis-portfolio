@@ -1,0 +1,14 @@
+{
+  "source": "NYC Open Data \u2014 Citywide Payroll Data (Fiscal Year)",
+  "source_url": "https://data.cityofnewyork.us/City-Government/Citywide-Payroll-Data-Fiscal-Year-/k397-673e",
+  "source_rows": 1666055,
+  "processed_rows": 1666055,
+  "fiscal_years": [
+    2023,
+    2024,
+    2025
+  ],
+  "generated_at_utc": "2026-10-14T03:19:07.763550+00:00",
+  "privacy_note": "Downloader does not request employee names or personal identifiers.",
+  "limitation": "Payroll records are not an attrition dataset and do not identify individual employee transitions across years."
+}

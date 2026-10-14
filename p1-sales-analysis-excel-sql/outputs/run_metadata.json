@@ -1,0 +1,54 @@
+{
+  "source": "Olist Brazilian E-Commerce Public Dataset",
+  "source_url": "https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce",
+  "query_count": 8,
+  "quality_checks": [
+    {
+      "check": "orders_rows",
+      "value": 99441,
+      "status": "review"
+    },
+    {
+      "check": "duplicate_order_ids",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "null_order_ids",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "orphan_order_items",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "orphan_order_payments",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "negative_item_prices",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "negative_freight_values",
+      "value": 0,
+      "status": "pass"
+    },
+    {
+      "check": "orders_without_items",
+      "value": 775,
+      "status": "review"
+    },
+    {
+      "check": "delivered_missing_delivery_timestamp",
+      "value": 8,
+      "status": "review"
+    }
+  ],
+  "generated_at_utc": "2026-10-14T01:55:10.142474+00:00",
+  "scope_note": "Sales figures use delivered orders. Product sales sum order-item prices; freight is reported separately. These are not profit figures."
+}

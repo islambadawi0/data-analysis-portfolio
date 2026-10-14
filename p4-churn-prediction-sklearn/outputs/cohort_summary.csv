@@ -1,0 +1,3 @@
+cohort,label_rows,unique_members,churn_rate,snapshot_date,members_without_transaction_features,features_with_member_profile
+train_v1,992931,992931,0.06392287077349786,20170131,2097,877161
+test_v2,970960,970960,0.08994191315811156,20170228,2527,860967

@@ -1,0 +1,55 @@
+-- Table name in Power BI: Payroll. Import data/processed/payroll_clean.csv.
+-- Gross pay is based on reported fiscal-year gross payments, not annualized base salary.
+
+Payroll Records = COUNTROWS(Payroll)
+
+Agencies = DISTINCTCOUNT(Payroll[agency])
+
+Reported Regular Pay = SUM(Payroll[regular_gross_paid])
+
+Reported Overtime Pay = SUM(Payroll[overtime_pay])
+
+Reported Other Pay = SUM(Payroll[other_pay])
+
+Reported Gross Pay =
+    [Reported Regular Pay] + [Reported Overtime Pay] + [Reported Other Pay]
+
+Overtime Share % =
+    DIVIDE([Reported Overtime Pay], [Reported Gross Pay])
+
+Overtime Hours = SUM(Payroll[overtime_hours])
+
+Average Annual-Basis Base Salary =
+    CALCULATE(
+        AVERAGE(Payroll[base_salary]),
+        FILTER(
+            Payroll,
+            CONTAINSSTRING(LOWER(Payroll[pay_basis]), "annual")
+                || CONTAINSSTRING(LOWER(Payroll[pay_basis]), "annum")
+                || CONTAINSSTRING(LOWER(Payroll[pay_basis]), "year")
+        )
+    )
+
+Prior Fiscal Year Gross Pay =
+    VAR CurrentFY = MAX(Payroll[fiscal_year])
+    RETURN
+        CALCULATE(
+            [Reported Gross Pay],
+            FILTER(ALL(Payroll[fiscal_year]), Payroll[fiscal_year] = CurrentFY - 1)
+        )
+
+Gross Pay YoY % =
+    DIVIDE([Reported Gross Pay] - [Prior Fiscal Year Gross Pay], [Prior Fiscal Year Gross Pay])
+
+Overtime Pay YoY % =
+    VAR CurrentFY = MAX(Payroll[fiscal_year])
+    VAR PriorValue =
+        CALCULATE(
+            [Reported Overtime Pay],
+            FILTER(ALL(Payroll[fiscal_year]), Payroll[fiscal_year] = CurrentFY - 1)
+        )
+    RETURN DIVIDE([Reported Overtime Pay] - PriorValue, PriorValue)
+
+Median Base Salary = MEDIAN(Payroll[base_salary])
+
+Regular Pay per Recorded Employee = DIVIDE([Reported Regular Pay], [Payroll Records])

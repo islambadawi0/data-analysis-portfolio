@@ -1,0 +1,7 @@
+metric,value
+raw_rows,426880
+clean_rows,375515
+rows_removed,51365
+distinct_manufacturers,43
+price_iqr_outlier_flagged,6710
+missing_odometer_after_domain_checks,2351

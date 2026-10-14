@@ -1,0 +1,10 @@
+check,value,status
+orders_rows,99441,review
+duplicate_order_ids,0,pass
+null_order_ids,0,pass
+orphan_order_items,0,pass
+orphan_order_payments,0,pass
+negative_item_prices,0,pass
+negative_freight_values,0,pass
+orders_without_items,775,review
+delivered_missing_delivery_timestamp,8,review

@@ -1,0 +1,17 @@
+column,missing_rows,missing_pct
+id,0,0.0
+price,0,0.0
+year,1205,0.28
+manufacturer,17646,4.13
+model,5277,1.24
+condition,174104,40.79
+cylinders,177678,41.62
+fuel,3013,0.71
+odometer,4400,1.03
+title_status,8242,1.93
+transmission,2556,0.6
+drive,130567,30.59
+type,92858,21.75
+paint_color,130203,30.5
+state,0,0.0
+posting_date,68,0.02
